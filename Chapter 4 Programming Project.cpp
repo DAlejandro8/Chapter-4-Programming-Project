@@ -2,21 +2,106 @@
 //
 
 #include <iostream>
-
+using namespace std;
 int main()
 {
+    double MASS;// represents the weight of package, not 0 or less or more than 20, in kilograms
+    double LENGTH;//represents the distance the package will go, not less than 10 miles or more than 3000 miles.
+    int MASSL = 0;
+    int MASSU = 20;
+    int LENGTHL = 10;
+    int LENGTHU = 3000;
+
+
+
+    bool valid = false;
+    bool VALID = false;
+
+    while (!valid) {//continues into a loop until right value is input
+        cout << "Enter weight of package \n";
+        cin >> MASS;//user types in the mass
+
+        if (MASS > MASSL && MASS <= MASSU)//THE LOOP IF PASS THROUGH IF COMMAND
+        {
+            valid = true;
+
+        }
+
+        else {
+
+
+            cout << "Error, mass needs to be 20Kg or less and more than 0 Kg";
+
+            cin.clear();
+            cin.ignore(1000000, '\n');
+
+
+        }
+
+
+
+
+
+    }
     
     
     
     
+
+    while (!VALID){//continues into a loop until right value is input again
+        cout << "What is the distance of your delivery?";
+        cin >> LENGTH;// user types in the distance
+
+        if (LENGTH > LENGTHL && LENGTH < LENGTHU)//THE LOOP IF PASS THROUGH IF COMMAND
+        {
+            VALID = true;
+
+        }
+
+        else {
+
+
+            cout << "Error, the package needs to be shipped more than 10 miles and less than 3000 miles ";
+
+            cin.clear();
+            cin.ignore(1000000, '\n');
+
+
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
-    
-    
-    
-    
-    
-    std::cout << "Hello World!\n";
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
