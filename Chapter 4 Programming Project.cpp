@@ -30,10 +30,10 @@ int main()
         else {
 
 
-            cout << "Error, mass needs to be 20Kg or less and more than 0 Kg";
+            cout << "Error, mass needs to be 20Kg or less and more than 0 Kg \n";//an error message if the wrong amount is put
 
             cin.clear();
-            cin.ignore(1000000, '\n');
+            cin.ignore(1000000, '\n');//both of these reset to beginning of expression
 
 
         }
@@ -49,7 +49,7 @@ int main()
     
 
     while (!VALID){//continues into a loop until right value is input again
-        cout << "What is the distance of your delivery?";
+        cout << "What is the distance of your delivery? \n";
         cin >> LENGTH;// user types in the distance
 
         if (LENGTH > LENGTHL && LENGTH < LENGTHU)//THE LOOP IF PASS THROUGH IF COMMAND
@@ -61,10 +61,10 @@ int main()
         else {
 
 
-            cout << "Error, the package needs to be shipped more than 10 miles and less than 3000 miles ";
+            cout << "Error, the package needs to be shipped more than 10 miles and less than 3000 miles \n";//the error message that shows up if the wrong amount is put
 
             cin.clear();
-            cin.ignore(1000000, '\n');
+            cin.ignore(1000000, '\n');//both of these functions are used to reset to beginningof expression 
 
 
         }
@@ -74,13 +74,72 @@ int main()
 
 
     }
+    
+    //I will use these values as a way to split up rate in a logical operator
+    int value2 = 2;
+    int value6 = 6;
+    int value10 = 10;
+    int value20 = 20;
+    double rate1 = 1.10;//2kg and less rate
+    double rate2 = 2.20;//2 to 6kg
+    double rate3 = 3.70;//more than 6 to 10kg rate
+    double rate4 = 4.80;//10 kg to 20kg rate
+    double RATIOFIVE = 500; //all the  rates are per 500 miles, so I will be dividing them by this variable 
+
+    //This sequence gives the output
+    //This part will determine which range the weight falls under and use the mileage to calculate the cost
+    if (MASS <= value2)//GIVES COSTS FOR 2KG AND LESS
+    {
+       
+        
+        double cost1 = rate1 * (LENGTH / RATIOFIVE);//all of these for each if is more or less the same 
+        //I put the length and ratio in parathesisize so that it is more readible and that it could be done first
+        
+        cout << "your package will cost $ " << cost1 << endl;
+
+
+        
+
+
+        }
+    else if (MASS > value2 && MASS <= value6)//GIVES COST FOR FOR THAN 2KG TO 6KG
+        {
+
+        double cost2 = rate2 * (LENGTH / RATIOFIVE);
+
+
+        cout << "your package will cost $ " << cost2 << endl;
+
+
+
+
+        }
+    else if (MASS > value6&&MASS <= value10)//GIVES COST FOR MORE THAN 6KG AND TO 10KG
+    {
+
+        double cost3 = rate3 * (LENGTH / RATIOFIVE);
+
+
+        cout << "your package will cost $ " << cost3 << endl;
 
 
 
 
 
+    }
+    else//the over 10kg but no more than 20kg should be in this category as the other categories eliminate the other options and the MASS loop statement prevents anything over 20
+    {
 
 
+        double cost4 = rate4 * (LENGTH / RATIOFIVE);
+
+
+        cout << "your package will cost $ " << cost4 << endl;
+
+
+
+
+    }
 
 
 
