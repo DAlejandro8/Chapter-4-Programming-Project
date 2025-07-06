@@ -44,50 +44,50 @@ int main()
 		int FEB{};
 
 
-	if (YEAR % 100 == 0)//testing if divisible by 100 for leap year test
-	{
-		if (YEAR % 400 == 0)//nested if, testing the second layer to see if leap year, if divisible by 400, then leap year
-			 FEB = 29;
+		if (YEAR % 100 == 0)//testing if divisible by 100 for leap year test
+		{
+			if (YEAR % 400 == 0)//nested if, testing the second layer to see if leap year, if divisible by 400, then leap year
+				FEB = 29;
 
-		else//not divisible by 400, so not leap year
+			else//not divisible by 400, so not leap year
 
-			 FEB = 28;
+				FEB = 28;
 
-	}
-	else{//not divisible by 100, so another, different, leap year test will be in place
-	
-		if (YEAR % 4 == 0)//if divisible by 4, then its a leap year
-			 FEB = 29;
+		}
+		else {//not divisible by 100, so another, different, leap year test will be in place
+
+			if (YEAR % 4 == 0)//if divisible by 4, then its a leap year
+				FEB = 29;
 
 
 			else // not divisible by 4 so not a leap year
 
 
-			 FEB = 28;
-		
+				FEB = 28;
 
 
-	}
+
+		}
 
 	
 		
 
 	switch (MONTH)//all the different responses for each different month and the days they have
 	{
-		case'1':
-		case'3':
-		case'5':
-		case'7':
-		case'8':
-		case'10':
-		case'12':std::cout << "31 days \n";
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:std::cout << "31 days \n";
 			break;
-		case'4':
-		case'6':
-		case'9':
-		case'11':std::cout << "30 days \n";
+		case 4:
+		case 6:
+		case 9:
+		case 11:std::cout << "30 days \n";
 			break;
-		case'2':std::cout << FEB << " days \n";
+		case 2:std::cout << FEB << " days \n";
 			//I put in variable here chosen from the year choice to determine how many days February has
 			//The days are the output
 			
