@@ -2,9 +2,16 @@
 //
 
 #include <iostream>
-
+using namespace std;
 int main()
 {
+    const double PI = 3.1459;//variable for pi instead of irrational number
+    char CHOOSE;//can only be one character because it has to be 1-4 choice
+
+
+
+
+    
 
 
 
@@ -29,10 +36,7 @@ int main()
 
 
 
-
-
-
-    std::cout << "Hello World!\n";
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
