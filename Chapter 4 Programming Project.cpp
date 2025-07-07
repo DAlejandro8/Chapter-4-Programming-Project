@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main()
 {
@@ -10,6 +11,9 @@ int main()
 
 
     bool VALID = false;
+    bool VALID1 = false;
+    bool VALID2 = false; 
+    bool VALID3 = false;
     //this program is a calculator
     //IT MAKES DIFFERENT GEOMETRY CALCULATIONS BASED ON THE USER'S NEED
     while (!VALID) {
@@ -18,10 +22,58 @@ int main()
         cout << "2. Calculate the Area of a Rectangle \n";
         cout << "3. Calculate the Area of a Triangle \n";
         cout << "4. Quit \n";
-        cout << "Enter your choice (1–4): \n";//these are all the option the user can choose
+        cout << "Enter your choice (1-4): \n";//these are all the option the user can choose
         cin >> CHOOSE;//the choice the user makes
      
-        if (CHOOSE == 1) {
+        if (CHOOSE == '1') {
+
+            VALID = true;
+
+            double RAD;//Radius of the circle variable
+
+            cout << "What is the radius of the circle? \n";
+
+            cin >> RAD;
+
+
+            if (RAD >= 0)//no error, non negative values only
+            {
+                double Cir = PI * (pow(RAD, 2)); // calculating the area of a circle
+
+                cout << "The area is "<< Cir << endl;
+
+
+
+
+            }
+            else {//every other value, will cause error, so negative values
+
+                cout << "Error, needs to be positive number \n"; //error message
+
+                cin.clear();
+                cin.ignore(1000000, '\n');//both of these reset to beginning of expression
+
+
+
+
+            }
+
+
+
+
+
+        }
+        else if (CHOOSE == '2') {
+            VALID = true;
+
+
+
+
+
+        }
+        else if (CHOOSE == '3') {
+            VALID = true;
+
 
 
 
@@ -30,29 +82,10 @@ int main()
 
 
         }
-        else if (CHOOSE == 2) {
+        else if (CHOOSE == '4') {
+            VALID = true;
 
-
-
-
-
-
-        }
-        else if (CHOOSE == 3) {
-
-
-
-
-
-
-
-
-
-        }
-        else if (CHOOSE == 4) {
-
-
-
+            cin.clear();
 
 
 
@@ -61,7 +94,10 @@ int main()
         }
         else {
 
+            cout << "Error, needs to be 1,2,3, or 4 \n";//an error message if a non 1-4 integer is chosen by user, or letters
 
+            cin.clear();
+            cin.ignore(1000000, '\n');//both of these reset to beginning of expression
 
 
 
