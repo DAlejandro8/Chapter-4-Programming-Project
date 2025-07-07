@@ -1,4 +1,4 @@
-// Chapter 4 Programming Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// C//pter 4 Programming Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
@@ -10,8 +10,27 @@ int main()
 
 
     bool VALID = false;
+    //this program is a calculator
+    while (!VALID) {
+        cout << "Geometry Calculator \n";
+        cout << "1. Calculate the Area of a Circle \n";
+        cout << "2. Calculate the Area of a Rectangle \n";
+        cout << "3. Calculate the Area of a Triangle \n";
+        cout << "4. Quit \n";
+        cout << "Enter your choice (1–4): \n";//these are all the option the user can choose
+        cin >> CHOOSE;//the choice the user makes
+     
+        if (CHOOSE==1)
 
-    
+        
+
+
+
+
+
+
+
+    }
 
 
 
