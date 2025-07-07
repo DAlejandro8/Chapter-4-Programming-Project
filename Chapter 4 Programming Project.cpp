@@ -29,32 +29,36 @@ int main()
 
             VALID = true;
 
-            double RAD;//Radius of the circle variable
+            while (!VALID1) {//doing it again so it goes back to asking fro radius if invalid number is inserted
 
-            cout << "What is the radius of the circle? \n";
+                double RAD;//Radius of the circle variable
 
-            cin >> RAD;
+                cout << "What is the radius of the circle? \n";
 
-
-            if (RAD >= 0)//no error, non negative values only
-            {
-                double Cir = PI * (pow(RAD, 2)); // calculating the area of a circle
-
-                cout << "The area is "<< Cir << endl;
+                cin >> RAD;
 
 
+                if (RAD >= 0)//no error, non negative values only
+                {
+                    double Cir = PI * (pow(RAD, 2)); // calculating the area of a circle
+
+                    cout << "The area is " << Cir << endl;//output of area
+
+                    VALID1 = true;
 
 
-            }
-            else {//every other value, will cause error, so negative values
+                }
+                else {//every other value, will cause error, so negative values
 
-                cout << "Error, needs to be positive number \n"; //error message
+                    cout << "Error, needs to be positive number \n"; //error message
 
-                cin.clear();
-                cin.ignore(1000000, '\n');//both of these reset to beginning of expression
+                    cin.clear();
+                    cin.ignore(1000000, '\n');//both of these reset to beginning of expression
 
 
 
+
+                }
 
             }
 
@@ -63,8 +67,70 @@ int main()
 
 
         }
+
+
+
+        
         else if (CHOOSE == '2') {
             VALID = true;
+
+            while (!VALID2) {// repeat back to beginning if a negative is input 
+
+                double WIT;
+                double LEN;
+
+                cout << "What is the length of rectangle \n";
+                cin >> LEN;
+
+                cout << "What is the width of rectangle \n";
+                cin >> WIT;
+
+
+                if (WIT >= 0 && LEN >= 0) {
+
+                    double sum = WIT * LEN; //calculating the area of rectangle
+
+                    cout << "The area is " << sum<<endl;//output of rectangle
+
+                    VALID2 = true;
+
+                    }
+
+                else {//every other value, will cause error, so negative values
+
+                    cout << "Error, needs to be positive number \n"; //error message
+
+                    cin.clear();
+                    cin.ignore(1000000, '\n');//both of these reset to beginning of expression
+
+
+
+
+                }
+                
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -75,6 +141,60 @@ int main()
             VALID = true;
 
 
+            while (!VALID3) {
+
+                double bas;//base variable
+                double hei;//height variable
+
+                cout << "What is the base of triangle \n";
+                cin >> bas;
+
+                cout << "What is the height of triangle \n";
+                cin >> hei;
+
+                if (bas >= 0 && hei >= 0) {
+
+                    double tot= hei * bas * 0.5; //calculating the area of triangle
+
+                    cout << "The area is " << tot << endl;//output of triangle
+
+                    VALID3 = true;
+
+                }
+
+                else {//every other value, will cause error, so negative values
+
+                    cout << "Error, needs to be positive number \n"; //error message
+
+                    cin.clear();
+                    cin.ignore(1000000, '\n');//both of these reset to beginning of expression
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -83,7 +203,7 @@ int main()
 
         }
         else if (CHOOSE == '4') {
-            VALID = true;
+            VALID = true;//ends code if 4 is pressed
 
             cin.clear();
 
