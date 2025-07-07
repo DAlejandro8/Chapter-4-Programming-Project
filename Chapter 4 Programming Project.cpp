@@ -11,6 +11,7 @@ int main()
 
     bool VALID = false;
     //this program is a calculator
+    //IT MAKES DIFFERENT GEOMETRY CALCULATIONS BASED ON THE USER'S NEED
     while (!VALID) {
         cout << "Geometry Calculator \n";
         cout << "1. Calculate the Area of a Circle \n";
@@ -20,9 +21,72 @@ int main()
         cout << "Enter your choice (1–4): \n";//these are all the option the user can choose
         cin >> CHOOSE;//the choice the user makes
      
-        if (CHOOSE==1)
+        if (CHOOSE == 1) {
+
+
+
+
+
+
+
+        }
+        else if (CHOOSE == 2) {
+
+
+
+
+
+
+        }
+        else if (CHOOSE == 3) {
+
+
+
+
+
+
+
+
+
+        }
+        else if (CHOOSE == 4) {
+
+
+
+
+
+
+
+
+        }
+        else {
+
+
+
+
+
+
+        }
+
+
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
