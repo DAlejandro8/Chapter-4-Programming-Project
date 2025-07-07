@@ -9,7 +9,7 @@ int main()
     char CHOOSE;//can only be one character because it has to be 1-4 choice
 
 
-
+    bool VALID = false;
 
     
 
